@@ -1,0 +1,10 @@
+export { default as GlobalStyle } from "../Styles/GlobalCss";
+export { default as Login } from "../Entry/Login";
+export { default as Registration } from "../Entry/Registration";
+export { default as Habits } from "../Habits/Habits";
+export { default as TodayHabit } from "../Habits-Today/TodayHabit";
+export { default as History } from "../History/History";
+export { default as Header } from "../Header/Header";
+export { default as Footer } from "../Footer/Footer";
+export { default as AddHabits } from "../Habits/AddHabits";
+export { default as DisplayHabits } from "../Habits/DisplayHabits";
