@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Footer({ todaysHabit }) {
   return (
     <StyledFooter>
-      <Link to={`/habitos`}>
+      <Link data-identifier="habit-page-action" to={`/habitos`}>
         <h1>Hábitos</h1>
       </Link>
       <Link to={`/hoje`}>
@@ -13,7 +13,7 @@ export default function Footer({ todaysHabit }) {
           <Progressbar todaysHabit={todaysHabit} />
         </div>
       </Link>
-      <Link to={`/historico`}>
+      <Link data-identifier="historic-page-action" to={`/historico`}>
         <h1>Histórico</h1>
       </Link>
     </StyledFooter>

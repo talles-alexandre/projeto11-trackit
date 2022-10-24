@@ -43,6 +43,7 @@ export default function Registration() {
         <form onSubmit={sendForm}>
           <section>
             <input
+              data-identifier="input-email"
               type="email"
               required
               placeholder="email"
@@ -53,6 +54,7 @@ export default function Registration() {
               }
             />
             <input
+              data-identifier="input-password"
               type="password"
               required
               placeholder="senha"
@@ -63,6 +65,7 @@ export default function Registration() {
               }
             />
             <input
+              data-identifier="input-name"
               type="name"
               required
               placeholder="nome"
@@ -73,6 +76,7 @@ export default function Registration() {
               }
             />
             <input
+              data-identifier="input-photo"
               type="text"
               required
               placeholder="foto"
@@ -101,7 +105,7 @@ export default function Registration() {
               </button>
             </div>
 
-            <Link to={`/`}>
+            <Link to={`/`} data-identifier="back-to-login-action">
               <nobr>
                 <h1>Já tem uma conta? Faça o login!</h1>
               </nobr>

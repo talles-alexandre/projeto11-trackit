@@ -40,6 +40,7 @@ export default function Login() {
           </div>
           <section>
             <input
+              data-identifier="input-email"
               type="email"
               required
               placeholder="email"
@@ -48,6 +49,7 @@ export default function Login() {
               value={email}
             />
             <input
+              data-identifier="input-password"
               type="password"
               required
               placeholder="senha"
@@ -57,7 +59,7 @@ export default function Login() {
             />
 
             <div>
-              <button>
+              <button data-identifier="login-btn">
                 {!disable ? (
                   "Entrar"
                 ) : (
@@ -76,7 +78,9 @@ export default function Login() {
 
             <Link to={`/cadastro`}>
               <nobr>
-                <h1>Não tem uma conta? Cadastre-se!</h1>
+                <h1 data-identifier="sign-up-action">
+                  Não tem uma conta? Cadastre-se!
+                </h1>
               </nobr>
             </Link>
           </section>

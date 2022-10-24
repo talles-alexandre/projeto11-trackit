@@ -13,7 +13,12 @@ export default function DisplayHabits({ userListedHabit }) {
     <nav>
       <section>
         <h1>Meus hábitos</h1>
-        <div onClick={() => setTypeHabit(true)}>+</div>
+        <div
+          data-identifier="create-habit-btn"
+          onClick={() => setTypeHabit(true)}
+        >
+          +
+        </div>
       </section>
       {typeHabit ? <AddHabits setTypeHabit={setTypeHabit} /> : ""}
 
@@ -60,12 +65,23 @@ function MyHabits({ name, days, habitId }) {
   return (
     <StyledDisplayHabits>
       <div>
-        <h1>{name}</h1>
-        <img src={trash} onClick={deleteHabit} alt="icon" />
+        <h1 data-identifier="habit-name">{name}</h1>
+        <img
+          data-identifier="delete-habit-btn"
+          src={trash}
+          onClick={deleteHabit}
+          alt="icon"
+        />
       </div>
       <span>
         {weekDays.map((item, index) => (
-          <Colour days={days} idP={item.id} listeddays={item.day} key={index} />
+          <Colour
+            data-identifier="week-day-btn"
+            days={days}
+            idP={item.id}
+            listeddays={item.day}
+            key={index}
+          />
         ))}
       </span>
     </StyledDisplayHabits>

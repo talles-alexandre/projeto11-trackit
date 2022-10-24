@@ -42,6 +42,7 @@ export default function Habits() {
             <section>
               <h1>Meus hábitos</h1>
               <div
+                data-identifier="create-habit-btn"
                 onClick={() => {
                   setTypeHabit(true);
                 }}
@@ -50,7 +51,7 @@ export default function Habits() {
               </div>
             </section>
             {typeHabit ? <AddHabits setTypeHabit={setTypeHabit} /> : ""}
-            <h2>
+            <h2 data-identifier="no-habit-message">
               Você não tem nenhum hábito cadastrado ainda. Adicione um hábito
               para começar a trackear!
             </h2>

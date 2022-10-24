@@ -51,6 +51,7 @@ export default function AddHabits({ setTypeHabit }) {
   return (
     <StyledAddHabits>
       <input
+        data-identifier="input-habit-name"
         type="text"
         placeholder="nome do hábito"
         value={typedHabbit}
@@ -63,6 +64,7 @@ export default function AddHabits({ setTypeHabit }) {
       <span>
         {weekDays.map((item, index) => (
           <WeekDay
+            data-identifier="week-day-btn"
             day={item.day}
             id={item.id}
             key={index}
@@ -74,8 +76,16 @@ export default function AddHabits({ setTypeHabit }) {
       </span>
       <div>
         <aside>
-          <h3 onClick={() => setTypeHabit(false)}>Cancelar</h3>
-          <h4 onClick={() => sendHabit()}>
+          <h3
+            data-identifier="cancel-habit-create-btn"
+            onClick={() => setTypeHabit(false)}
+          >
+            Cancelar
+          </h3>
+          <h4
+            data-identifier="save-habit-create-btn"
+            onClick={() => sendHabit()}
+          >
             {!disable ? (
               "Salvar"
             ) : (

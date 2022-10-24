@@ -50,7 +50,7 @@ export default function TodayHabits() {
     <>
       <Header />
       <StyledTodayHabits>
-        <nav>
+        <nav data-identifier="today-infos">
           <section>
             <h1>{day}</h1>
             {todaysHabit.length === 0 ? (
@@ -132,7 +132,7 @@ function DisplayTodayHabits({
         </h1>
       </div>
 
-      <span onClick={handleCheck}>
+      <span data-identifier="done-habit-btn" onClick={handleCheck}>
         <img src={WhiteCheck} alt="checkbox" />
       </span>
     </Habit>
